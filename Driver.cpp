@@ -25,17 +25,37 @@ int main()
         {
             if((pushTower == 2) && (t2->getCount() < 3))
             {
-                t2->push(t1->pop());
-                t1->display();
-                t2->display();
-                t3->display(); 
+                Disk* popReturn = t1->pop();
+                if(t2->push(popReturn))
+                {
+                    t1->display();
+                    t2->display();
+                    t3->display(); 
+                }
+                else
+                {
+                    t1->push(popReturn);
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
             }
             else if((pushTower == 3) && (t3->getCount() < 3))
             {
-                t3->push(t1->pop());
-                t1->display();
-                t2->display();
-                t3->display();
+                Disk* popReturn = t1->pop();
+                if(t3->push(popReturn))
+                {
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
+                else
+                {
+                    t1->push(popReturn);
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
             }
             else
             {
@@ -46,17 +66,37 @@ int main()
         {
             if((pushTower == 1) && (t1->getCount() < 3))
             {
-                t1->push(t2->pop());
-                t1->display();
-                t2->display();
-                t3->display();
+                Disk* popReturn = t2->pop();
+                if(t1->push(popReturn))
+                {
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
+                else
+                {
+                    t2->push(popReturn);
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
             }
             else if((pushTower == 3) && (t3->getCount() < 3))
             {
-                t3->push(t2->pop());
-                t1->display();
-                t2->display();
-                t3->display();
+                Disk* popReturn = t2->pop();
+                if(t3->push(popReturn))
+                {
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
+                else
+                {
+                    t2->push(popReturn);
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
             }
             else
             {
@@ -67,17 +107,37 @@ int main()
         {
             if((pushTower == 1) && (t1->getCount() < 3))
             {
-                t1->push(t3->pop());
-                t1->display();
-                t2->display();
-                t3->display();
+                Disk* popReturn = t3->pop();
+                if(t1->push(popReturn))
+                {
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
+                else
+                {
+                    t3->push(popReturn);
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
             }
             else if((pushTower == 2) && (t2->getCount() < 3))
             {
-                t2->push(t3->pop());
-                t1->display();
-                t2->display();
-                t3->display();
+                Disk* popReturn = t3->pop();
+                if(t2->push(popReturn))
+                {
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
+                else
+                {
+                    t3->push(popReturn);
+                    t1->display();
+                    t2->display();
+                    t3->display();
+                }
             }
             else
             {

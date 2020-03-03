@@ -10,7 +10,7 @@ class Tower
     public:
         Tower(int towerNumber);
         int getCount();
-        void push(Disk* d);
+        bool push(Disk* d);
         Disk* pop();
         Disk* peek();
         void display();

@@ -13,7 +13,7 @@ int Tower::getCount()
     return this->count;
 }
         
-void Tower::push(Disk* d)
+bool Tower::push(Disk* d)
 {
     if(this->top) //if there's at least one disk
     {
@@ -22,16 +22,19 @@ void Tower::push(Disk* d)
             d->setNextDisk(this->top);
             this->top = d;
             this->count++;
+            return true;
         }   
         else
         {
             std::cout << "Illegal move! Try again.\n";
+            return false;
         }
     }
     else
     {
         this->top = d;
         this->count++;
+        return true;
     }
 }
 
